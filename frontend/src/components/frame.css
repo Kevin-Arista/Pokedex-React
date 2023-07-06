@@ -1,5 +1,9 @@
 .infoCard{
     background-color: black;
+    display: inline-block;
+    margin: 20px;
+    width: 150px !important;
+    border: 2px solid white;
 }
 
 img{

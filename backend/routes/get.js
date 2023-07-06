@@ -17,7 +17,7 @@ router.get('/', (req, res)=>{
 
 router.get('/all-pokemons', async (req, res)=>{
     try {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100');
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=200');
         // it is important to "await" for response or we might not have anything to display
         const data = response.data;
         res.json(data.results);

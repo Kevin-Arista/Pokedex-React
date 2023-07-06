@@ -10,36 +10,36 @@ function CardComponent() {
     
     let [pokemonDats, setPokemonDats] = useState();
       
-    api.get('/pikachu').then(res =>{
-        console.log(res.data);
-        setPokemonDats(res.data)
-    });
+    // api.get('/pikachu').then(res =>{
+    //     console.log(res.data);
+    //     setPokemonDats(res.data)
+    // });
 
     // const [data, setData] = useState(null);
 
-    // useEffect(() => {
-    //     fetchData();
-    // }, []);
+    useEffect(() => {
+        fetchData();
+    }, []);
 
-    // const fetchData = async () => {
-    //     try {
-    //     const response = await axios.get('http://localhost:8080/catch/pikachu');
-    //     const data = response.data;
-    //     console.log(data);
-    //     setData(data);
-    //     } catch (error) {
-    //     console.error(error);
-    //     }
-    // };
+    const fetchData = async () => {
+        try {
+        const response = await axios.get('http://localhost:8080/catch/pikachu');
+        const data = response.data;
+        console.log(data);
+        setPokemonDats(data);
+        } catch (error) {
+        console.error(error);
+        }
+    };
     
 
     return(
         <div className="CardComponent">
            
-            {/* <div className="statCard" key={pokemonDats.name}>
+            <div className="statCard" key={pokemonDats.name}>
               <p>{pokemonDats.name}</p>
               <img src={pokemonDats.image} alt={pokemonDats.name}/>
-            </div> */}
+            </div>
         </div>
     );
 } 
