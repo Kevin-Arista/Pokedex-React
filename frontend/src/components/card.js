@@ -36,10 +36,10 @@ function CardComponent() {
     return(
         <div className="CardComponent">
            
-            <div className="statCard" key={pokemonDats.name}>
+            {/* <div className="statCard" key={pokemonDats.name}>
               <p>{pokemonDats.name}</p>
               <img src={pokemonDats.image} alt={pokemonDats.name}/>
-            </div>
+            </div> */}
         </div>
     );
 } 
