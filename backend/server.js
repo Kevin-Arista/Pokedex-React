@@ -28,4 +28,4 @@ server.use('/catch', getRouter);
 // run server
 server.listen(PORT, () => {
     console.log(`Serving running on localhost:${PORT}`);
-  });
+});
