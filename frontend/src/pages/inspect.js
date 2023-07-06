@@ -1,9 +1,11 @@
 import React from 'react';
+import CardComponent from '../components/card';
+
 const Inspect = () =>{
   return (
     <div>
       <h3>Inspect</h3>
-      <p>look at the card of one pokemon.</p>
+      <CardComponent></CardComponent>
     </div>
   );
 }

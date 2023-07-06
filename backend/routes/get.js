@@ -23,7 +23,7 @@ router.get('/all-pokemons', async (req, res)=>{
         res.json(data.results);
       } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Error: could not fetch data from third Party API: Pokimon' });
+        res.status(500).json({ error: 'Error: could not fetch data from third Party API: Pokemon' });
       }
 });
 
