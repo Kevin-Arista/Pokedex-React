@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CardComponent from '../components/card';
-import './inspect.css'
+import './inspect.css';
 
 const Inspect = () =>{
+  const [inputText, setInputText] = useState('');
+
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <div>
-      <h3>Inspect</h3>
-      <input placeholder="Who's that Pokemon?"/>
-      <button>GO!</button>
-      <CardComponent></CardComponent>
+      <input type="text" value={inputText} onChange={handleInputChange} />
+      <CardComponent textProp={inputText} />
     </div>
   );
 }

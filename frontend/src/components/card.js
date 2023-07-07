@@ -4,9 +4,9 @@ import './card.css'
 
 function CardComponent() {
 
-    const api = axios.create({
-        baseURL: `http://localhost:8080/catch`
-    });
+    // const api = axios.create({
+    //     baseURL: `http://localhost:8080/catch`
+    // });
     
     let [pokemonDats, setPokemonDats] = useState();
       
@@ -14,8 +14,6 @@ function CardComponent() {
     //     console.log(res.data);
     //     setPokemonDats(res.data)
     // });
-
-    // const [data, setData] = useState(null);
 
     useEffect(() => {
         fetchData();
@@ -35,10 +33,10 @@ function CardComponent() {
 
     return(
         <div className="CardComponent">
-           
-            <div className="statCard" key={pokemonDats.name}>
-              <p>{pokemonDats.name}</p>
-              <img src={pokemonDats.image} alt={pokemonDats.name}/>
+           {/* must have at "?" it servers as an await */}
+            <div className="statCard" key={pokemonDats?.name}>
+              <p>{pokemonDats?.name}</p>
+              <img src={pokemonDats?.image} alt={pokemonDats?.name}/>
             </div>
         </div>
     );
