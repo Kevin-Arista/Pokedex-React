@@ -1,0 +1,13 @@
+#pikachu{
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    width: 600px;
+}
+
+#snivy{
+    position: absolute;
+    right: 100px;
+    top: 200px;
+    width: 400px;
+}
